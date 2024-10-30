@@ -52,10 +52,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             const logs = await contract.queryFilter(filter, deploymentBlock, 'latest');
             console.log("Transfer logs fetched successfully. Number of logs:", logs.length);
 
-            const pastHolders = logs.map(log => log.args.from).filter((address, index, self) =>
+            let pastHolders = logs.map(log => log.args.from).filter((address, index, self) =>
                 address !== ethers.constants.AddressZero && self.indexOf(address) === index
             );
             console.log("Past holders filtered successfully:", pastHolders);
+
+            // Reverse the array to list addresses in reverse order
+            pastHolders = pastHolders.reverse();
 
             // Populate the past holders list
             const pastHoldersList = document.getElementById('pastHolders');
