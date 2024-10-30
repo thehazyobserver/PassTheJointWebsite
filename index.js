@@ -57,13 +57,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             );
             console.log("Past holders filtered successfully:", pastHolders);
 
+            // Reverse the array to list addresses in reverse order
+            pastHolders = pastHolders.reverse();
+
             // Populate the past holders list
             const pastHoldersList = document.getElementById('pastHolders');
             pastHoldersList.innerHTML = ''; // Clear loading text
             pastHolders.forEach((address, index) => {
                 console.log("Adding past holder to list:", address);
                 const listItem = document.createElement('li');
-                listItem.innerText = `${pastHolders.length - index}. ${address}`;
+                listItem.innerText = `${index + 1}. ${address}`;
                 pastHoldersList.appendChild(listItem);
             });
         } catch (error) {
