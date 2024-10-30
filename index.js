@@ -1,4 +1,3 @@
-// No need to use require, since ethers.js is loaded from the CDN and available globally
 document.addEventListener('DOMContentLoaded', async () => {
     console.log("DOM fully loaded and parsed. Initializing script...");
 
@@ -61,10 +60,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Populate the past holders list
             const pastHoldersList = document.getElementById('pastHolders');
             pastHoldersList.innerHTML = ''; // Clear loading text
-            pastHolders.forEach(address => {
+            pastHolders.forEach((address, index) => {
                 console.log("Adding past holder to list:", address);
                 const listItem = document.createElement('li');
-                listItem.innerText = address;
+                listItem.innerText = `${index + 1}. ${address}`;
                 pastHoldersList.appendChild(listItem);
             });
         } catch (error) {
