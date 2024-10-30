@@ -1,46 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pass the JOINT</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #121212;
-            color: #b6ff00;
-        }
-        .holder, .past-holders {
-            margin-top: 20px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-    </style>
-</head>
-<body>
-    <h1>Pass the JOINT</h1>
-    <div class="holder">
-        <h2>Joint Holder</h2>
-        <p id="currentHolder">Loading...</p>
-    </div>
-    <div class="past-holders">
-        <h2>Those who were there:</h2>
-        <ul id="pastHolders">Loading...</ul>
-    </div>
-
-    <!-- Include ethers.js CDN before your custom JavaScript file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js" defer></script>
-    <!-- Link to your custom JavaScript file -->
-    <script src="index.js" defer></script>
-</body>
-</html>
-```
-```javascript
-// index.js
-
+// No need to use require, since ethers.js is loaded from the CDN and available globally
 document.addEventListener('DOMContentLoaded', async () => {
     console.log("DOM fully loaded and parsed. Initializing script...");
 
