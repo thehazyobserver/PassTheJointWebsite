@@ -1,6 +1,6 @@
 // index.js
 
-// Wait for the DOM to fully load before running the script
+// Wait for 1the DOM to fully load before running the script
 document.addEventListener('DOMContentLoaded', async () => {
     console.log("DOM fully loaded and parsed. Initializing script...");
 
