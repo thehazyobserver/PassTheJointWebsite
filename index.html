@@ -13,28 +13,29 @@
         }
         .holder, .past-holders {
             margin-top: 20px;
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-    li {
-        border: 1px solid #ffffff;
-        padding: 10px;
-        margin: 5px 0;
-    }
-    #currentHolder {
-        border: 1px solid #ffffff;
-        padding: 10px;
-        display: inline-block;
-    }
-    .button-container {
-        margin: 20px 0 40px 0; 
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            border: 1px solid #ffffff;
+            padding: 10px;
+            margin: 5px 0;
+            display: inline-block; /* Make the border wrap around the text */
+        }
+        #currentHolder {
+            border: 1px solid #ffffff;
+            padding: 10px;
+            display: inline-block;
+        }
+        .button-container {
+            margin: 20px 0 40px 0;
         }
         .button-container a {
             text-decoration: none;
-            color: rgb(0, 0, 0);
-            background-color: #ffffff;
+            color: white;
+            background-color: #007bff;
             padding: 10px 15px;
             border-radius: 5px;
             margin-right: 10px;
@@ -43,14 +44,13 @@
 </head>
 <body>
     <h1>Pass the JOINT</h1>
-    <p>The Joint is a symbol of unity on Fantom. One more rotation before the price is as high as we are and we are over in the green pastures of Sonic.</p>
-
+    <p>The Joint is a symbol of unity on Fantom. One more rotation before the price is as high as we are and we’re over in the green pastures of Sonic.</p>
     <p>There is only 1 $JOINT so share it with your friends. When you pass the joint, you will receive a gift.</p>
-
+    
     <div class="button-container">
-        <a href="https://paintswap.finance/marketplace/fantom/collections/0x47468b03DAD64D4843D7975F2E04c83aFd6D35f8/nfts" target="_blank">PaintSwap</a>
-        <a href="https://x.com/PassTheJointFTM" target="_blank">Twitter</a>
-        <a href="https://t.me/PASSTHEJOINTFTM/1" target="_blank">Telegram</a>
+        <a href="https://paintswap.finance" target="_blank">PaintSwap</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://telegram.org" target="_blank">Telegram</a>
     </div>
 
     <div class="holder">
@@ -64,7 +64,6 @@
 
     <!-- Include ethers.js CDN before your custom JavaScript file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js" defer></script>
-    <!-- Link to your custom JavaScript file -->
     <script src="index.js" defer></script>
 </body>
 </html>
