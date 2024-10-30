@@ -1,5 +1,4 @@
-// Ensure ethers.js is imported
-const { ethers } = require('ethers');
+// No need to use require, since ethers.js is loaded from the CDN and available globally
 
 // Connect to Fantom blockchain using ethers.js
 const provider = new ethers.providers.JsonRpcProvider('https://rpcapi.fantom.network');
@@ -27,9 +26,7 @@ const tokenId = 0;
 // Function to get the current holder of Token ID 0
 async function getCurrentHolder() {
     try {
-        console.log("Fetching current holder...");
         const holder = await contract.ownerOf(tokenId);
-        console.log("Current holder:", holder);
         document.getElementById('currentHolder').innerText = holder;
     } catch (error) {
         console.error("Error fetching current holder:", error);
@@ -40,10 +37,8 @@ async function getCurrentHolder() {
 // Function to get past holders from Transfer events
 async function getPastHolders() {
     try {
-        console.log("Fetching past holders...");
         const filter = contract.filters.Transfer(null, null, tokenId);
         const logs = await contract.queryFilter(filter, 0, 'latest');
-        console.log("Transfer logs:", logs);
         
         const pastHolders = logs.map(log => log.args.from).filter((address, index, self) => 
             address !== ethers.constants.AddressZero && self.indexOf(address) === index
