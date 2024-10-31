@@ -10,6 +10,7 @@
             text-align: center;
             background-color: #0059d7;
             color: #ffffff;
+            position: relative;
         }
         p {
             font-size: 18px; /* Increase font size for paragraph text */
@@ -37,28 +38,36 @@
             display: inline-block;
         }
         .button-container {
-            margin: 40px 0 40px 0;
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
         .button-container a {
-            text-decoration: none;
-            color: white;
-            background-color: #007bff;
-            padding: 10px 15px;
-            border-radius: 5px;
             margin-right: 10px;
+            display: inline-block;
+        }
+        .button-container img {
+            width: 40px; /* Adjust the size as needed */
+            height: 40px; /* Adjust the size as needed */
         }
     </style>
 </head>
 <body>
+    <div class="button-container">
+        <a href="https://paintswap.finance" target="_blank">
+            <img src="images/paintswap.png" alt="PaintSwap">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="images/x.png" alt="Twitter">
+        </a>
+        <a href="https://telegram.org" target="_blank">
+            <img src="images/telegram.png" alt="Telegram">
+        </a>
+    </div>
+
     <h1>Pass the JOINT</h1>
     <p>The Joint is a symbol of unity on Fantom. One more rotation before the price is as high as we are and we’re over in the green pastures of Sonic.</p>
     <p>There is only 1 $JOINT so share it with your friends. When you pass the joint, you will receive a gift.</p>
-    
-    <div class="button-container">
-        <a href="https://paintswap.finance" target="_blank">PaintSwap</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://telegram.org" target="_blank">Telegram</a>
-    </div>
 
     <div class="holder">
         <h2>Current Joint Holder</h2>
