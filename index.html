@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PASS THE $JOINT</title>
+    <title>Pass the JOINT</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,9 +11,12 @@
             background-color: #0059d7;
             color: #ffffff;
             position: relative;
+            margin: 0;
+            padding: 0;
         }
         p {
             font-size: 18px; /* Increase font size for paragraph text */
+            margin: 10px;
         }
         .holder, .past-holders {
             margin-top: 20px;
@@ -28,7 +31,8 @@
             padding: 10px;
             margin: 5px 0;
             display: block; /* Display list items as block elements */
-            width: 600px; /* Set a fixed width */
+            width: 90%; /* Set a percentage width for responsiveness */
+            max-width: 600px; /* Set a maximum width */
             margin-left: auto; /* Center the list items */
             margin-right: auto; /* Center the list items */
         }
@@ -50,23 +54,41 @@
             width: 40px; /* Adjust the size as needed */
             height: 40px; /* Adjust the size as needed */
         }
+        video {
+            width: 90%; /* Set a percentage width for responsiveness */
+            max-width: 600px; /* Set a maximum width */
+            margin: 20px auto; /* Center the video */
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .button-container {
+                position: static;
+                margin: 10px 0;
+            }
+            .button-container a {
+                margin: 5px;
+            }
+            p {
+                font-size: 16px; /* Adjust font size for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="button-container">
-        <a href="https://paintswap.finance/marketplace/fantom/collections/0x47468b03DAD64D4843D7975F2E04c83aFd6D35f8/nfts" target="_blank">
+        <a href="https://paintswap.finance" target="_blank">
             <img src="images/paintswap.png" alt="PaintSwap">
         </a>
-        <a href="https://x.com/PassTheJointFTM" target="_blank">
+        <a href="https://twitter.com" target="_blank">
             <img src="images/x.png" alt="Twitter">
         </a>
-        <a href="https://t.me/PASSTHEJOINTFTM/1" target="_blank">
+        <a href="https://telegram.org" target="_blank">
             <img src="images/telegram.png" alt="Telegram">
         </a>
     </div>
 
-    <h1>PASS THE $JOINT</h1>
-    <video width="600" autoplay loop muted>
+    <h1>Pass the JOINT</h1>
+    <video autoplay loop muted>
         <source src="videos/PassTheJoint.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
